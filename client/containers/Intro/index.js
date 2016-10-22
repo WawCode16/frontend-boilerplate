@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import Actions from '../../actions/intro'
+import * as actions from '../../actions/intro'
 
 
 class Intro extends Component {
@@ -12,9 +12,13 @@ class Intro extends Component {
     return (
       <div>
         <h1>Intro</h1>
-        <Link to="/results">Go to results</Link>
+        <button onClick={::this.submit}>Submit</button>
       </div>
     )
+  }
+
+  submit() {
+    this.props.actions.makeQuery('Duppa');
   }
 }
 
@@ -24,7 +28,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(Actions, dispatch)
+    actions: bindActionCreators(actions, dispatch)
   }
 }
 
