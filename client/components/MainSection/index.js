@@ -1,19 +1,23 @@
-
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+import HeaderLogo from '../HeaderLogo/index'
+import AddressInput from '../AddressInput/index'
 import style from './style.scss'
 
 
 class MainSection extends Component {
   constructor(props, context) {
     super(props, context)
-    this.state = { }
+    this.state = {}
   }
 
 
   render() {
-    const { actions } = this.props
+    const {actions} = this.props
     return (
-        <h1>Dupa</h1>
+      <div className="main-section">
+        <HeaderLogo />
+        <AddressInput />
+      </div>
     )
   }
 }

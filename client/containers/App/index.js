@@ -4,13 +4,13 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import MainSection from '../../components/MainSection'
 import * as Actions from '../../actions/index.js'
-import style from './style.scss'
+import './style.scss'
 
 class App extends Component {
   render() {
     const { actions, children } = this.props
     return (
-      <div className={style.normal}>
+      <div className="page">
         <MainSection actions={actions} />
         {children}
       </div>
