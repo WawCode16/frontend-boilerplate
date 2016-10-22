@@ -2,8 +2,9 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
 import MainSection from '../../components/MainSection'
-import * as Actions from '../../actions/index.js'
+import Actions from '../../actions/app'
 import './style.scss'
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     const { actions, children } = this.props
     return (
       <div className="page">
-        <MainSection actions={actions} />
+        dupa
         {children}
       </div>
     )

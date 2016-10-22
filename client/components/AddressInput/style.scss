@@ -4,9 +4,28 @@
   justify-content: center;
   align-items: center;
 
-  input {
+  input, button {
     padding: 0.5em;
     font-size: 3em;
+    margin-left: 0.5em;
+    &:first-child {
+      margin-left: 0;
+    }
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  input {
     width: 300px;
+  }
+
+  .button {
+    cursor: pointer;
+  }
+
+  .autocomplete-item {
+    padding: 0.5em;
+    font-size: 2em;
   }
 }

@@ -13,7 +13,7 @@ class HeaderLogo extends Component {
     const {actions} = this.props
     return (
       <div className="header-logo">
-        <img src=""/>
+        <img src="" alt="Logo"/>
       </div>
     )
   }
