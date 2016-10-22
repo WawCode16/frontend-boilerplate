@@ -16,7 +16,6 @@ class MainSection extends Component {
     return (
       <div className="main-section">
         <HeaderLogo />
-        <AddressInput />
       </div>
     )
   }

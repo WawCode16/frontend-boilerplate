@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 import MainSection from '../../components/MainSection'
 import * as actions from '../../actions/app'
 import * as selectors from '../../reducers/app'
-import from './style.scss'
+import './style.scss'
 
 class App extends Component {
 
@@ -38,7 +38,37 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     query: selectors.querySelector(state.app),
-    data: selectors.dataSelector(state.app),
+    data: {
+     locations: [
+       {
+         name: 'Nazwa',
+         description: 'Opis Opis Opis Opis Opis Opis Opis Opis Opis',
+         additionalInfo: [
+           'Tu będzie fajnie',
+           'A nawet bardzo'
+         ],
+         distance: {
+           type: 'walking',
+           value: 700,
+           unit: 'm',
+           time: 15
+         }
+       },
+       {
+         name: 'Nazwa 2',
+         description: 'Drugi Opis Drugi Opis Drugi Opis Drugi Opis Drugi Opis ',
+         additionalInfo: [
+           'Tu będzie jeszcze fajniej'
+         ],
+         distance: {
+           type: 'driving',
+           value: 2,
+           unit: 'km',
+           time: 7
+         }
+       }
+     ]
+    },
     loading: selectors.isLoading(state.app)
   }
 }

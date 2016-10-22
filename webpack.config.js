@@ -38,7 +38,12 @@ module.exports = {
       {
         test: /\.scss$/,
         include: /client/,
-        loader: 'style!css!sass'
+        loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.scss?$/,
+        exclude: /client/,
+        loaders: ['style', 'css', 'sass']
       },
       {
         test: /\.css$/,
@@ -53,6 +58,11 @@ module.exports = {
           'babel-loader'
         ]
       },
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml'},
+      {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
+      {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/octet-stream"},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader"},
     ],
   },
   resolve: {

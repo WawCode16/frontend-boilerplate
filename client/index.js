@@ -9,6 +9,8 @@ import App from './containers/App'
 import Intro from './containers/Intro'
 import configure from './store'
 import './style.scss'
+import 'font-awesome/scss/font-awesome.scss'
+
 
 const store = configure()
 const history = syncHistoryWithStore(browserHistory, store)
