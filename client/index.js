@@ -16,6 +16,8 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}>
       </Route>
+      <Route path="/results" component={App}>
+      </Route>
     </Router>
   </Provider>,
   document.getElementById('root')
