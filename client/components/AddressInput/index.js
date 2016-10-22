@@ -35,20 +35,20 @@ class AddressInput extends Component {
       location: value,
       availableLocations: []
     })
-    clearTimeout(this.changeTimeout);
-    this.changeTimeout = setTimeout(() => {
-      this.loadAvailableLocations(value).then(availableValues => {
-        this.setState({
-          availableLocations: availableValues
-        })
-      })
-    }, 500);
+    // clearTimeout(this.changeTimeout);
+    // this.changeTimeout = setTimeout(() => {
+    //   this.loadAvailableLocations(value).then(availableValues => {
+    //     this.setState({
+    //       availableLocations: availableValues
+    //     })
+    //   })
+    // }, 500);
 
   }
 
   search(value) {
-    if (value !== '') {
-      this.props.onSearch(value);
+    if (value !== '' || this.state.location !== '') {
+      this.props.onSearch(value || this.state.location);
     }
   }
 
