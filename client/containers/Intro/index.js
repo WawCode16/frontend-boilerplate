@@ -15,8 +15,13 @@ class Intro extends Component {
       <div className="page">
         <HeaderLogo />
         <AddressInput onSearch={::this.search}/>
+        <button onClick={::this.submit}>Submit</button>
       </div>
     )
+  }
+
+  submit() {
+    this.props.actions.makeQuery('Duppa');
   }
 
   search(address) {
@@ -30,7 +35,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(Actions, dispatch)
+    actions: bindActionCreators(actions, dispatch)
   }
 }
 
