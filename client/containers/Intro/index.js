@@ -1,19 +1,18 @@
 
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import MainSection from '../../components/MainSection'
-import Actions from '../../actions/app'
-import style from './style.scss'
+import { connect } from 'react-redux'
+import Actions from '../../actions/intro'
 
-class App extends Component {
+
+class Intro extends Component {
   render() {
     const { actions, children } = this.props
     return (
-      <div className={style.normal}>
-        <MainSection actions={actions} />
-        {children}
+      <div>
+        <h1>Intro</h1>
+        <Link to="/results">Go to results</Link>
       </div>
     )
   }
@@ -32,4 +31,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(Intro)
