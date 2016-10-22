@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import Header from '../../components/Header'
 import MainSection from '../../components/MainSection'
 import * as TodoActions from '../../actions/todos'
-import style from './style.css'
+import style from './style.scss'
 
 class App extends Component {
   render() {

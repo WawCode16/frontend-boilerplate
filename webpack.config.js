@@ -36,6 +36,11 @@ module.exports = {
         ]
       },
       {
+        test: /\.scss$/,
+        include: /client/,
+        loader: 'style!css!sass'
+      },
+      {
         test: /\.css$/,
         exclude: /client/,
         loader: 'style!css'

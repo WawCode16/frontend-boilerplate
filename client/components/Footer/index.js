@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../constants/filters'
 import classnames from 'classnames'
-import style from './style.css'
+import style from './style.scss'
 
 const FILTER_TITLES = {
   [SHOW_ALL]: 'All',
