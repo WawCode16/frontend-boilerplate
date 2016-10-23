@@ -31,23 +31,23 @@ export const performQuery = (query) => (dispatch, state) => {
           radius: 5,
           nearestDistance: 550
         }, {
-          category: 'education',
+          category: 'transportation',
           score: 7,
           inRadius: 3,
           radius: 5,
-          nearestDistance: 345
+          nearestDistance: 440
         }, {
-          category: 'dining',
+          category: 'banks',
           score: 9,
           inRadius: 4,
           radius: 5,
           nearestDistance: 100
         }, {
-          category: 'green-areas',
-          score: 5,
-          inRadius: 5,
+          category: 'disabled',
+          score: 10,
+          inRadius: 10,
           radius: 5,
-          nearestDistance: 550
+          nearestDistance: 100
         }
         ]
       }

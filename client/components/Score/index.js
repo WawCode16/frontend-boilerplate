@@ -13,7 +13,10 @@ class Score extends Component {
   static scoreCategoryToIconClass = {
     education: 'fa-graduation-cap',
     dining: 'fa-cutlery',
-    'green-areas': 'fa-tree'
+    'green-areas': 'fa-tree',
+    transportation: 'fa-train',
+    banks: 'fa-bank',
+    disabled: 'fa-wheelchair-alt'
   }
 
   render() {
