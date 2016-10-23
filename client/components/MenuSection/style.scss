@@ -1,0 +1,20 @@
+.menu-section {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  background: red;
+  padding: 10px;
+
+  .search-container {
+    flex: 0 1 auto;
+    & > div {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+    }
+    input, button {
+      font-size: 1em;
+    }
+  }
+}

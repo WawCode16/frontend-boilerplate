@@ -2,4 +2,117 @@
   flex: 1 0;
   display: flex;
   flex-direction: column;
+  line-height: 1.4;
+  padding: 20px;
+  overflow: auto;
+
+  .main-score-container {
+    font-size: 8em;
+  }
+
+  .sub-scores-container {
+    font-size: 3em;
+    margin-top: 20px;
+  }
+
+  .main-score-container {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    .score-icon-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 2em;
+      height: 2em;
+      min-width: 2em;
+      border: 5px solid;
+      border-radius: 50%;
+      &:hover i {
+        transform: scale(1.25);
+      }
+      i {
+        transition: transform 1s;
+        margin-top: -0.25em;
+      }
+      .score-item {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        font-size: 25%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  .sub-scores-container {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 3em;
+    margin-top: 20px;
+    .score {
+      display:flex;
+      flex-direction: column;
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0;
+      }
+      border: 1px solid black;
+      border-radius: 3px;
+      .score-content {
+        display: flex;
+        flex: 1 0;
+        padding: 10px;
+        .score-icon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2em;
+          height: 2em;
+          min-width: 2em;
+          border: 5px solid;
+          border-radius: 50%;
+          &:hover i {
+            transform: scale(1.25);
+          }
+          i {
+            transition: transform 1s;
+          }
+        }
+        .score-items {
+          display: flex;
+          flex: 1 0 auto;
+          justify-content: space-between;
+          .score-item {
+            display: flex;
+            flex: 1 0;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            font-size: 0.4em;
+            padding: 0 10px;
+            border-left: 1px solid black;
+            &:first-child {
+              border-left: 0px;
+            }
+            .score-item-title {
+              text-align: center;
+            }
+            .score-item-value {
+              font-size: 2em
+            }
+          }
+        }
+      }
+      .score-rate-bar {
+        flex: 0 0 20px;
+        background: green;
+      }
+    }
+  }
 }
