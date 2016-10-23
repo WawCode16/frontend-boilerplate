@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import HeaderLogo from '../HeaderLogo/index'
 import AddressInput from '../AddressInput/index'
 import style from './style.scss'
-import classNames from 'classnames'
+import Score from '../Score'
 
 
 class MainSection extends Component {
@@ -11,22 +11,16 @@ class MainSection extends Component {
     this.state = {}
   }
 
-  static scoreCategoryToIconClass = {
-    education: 'fa-graduation-cap',
-    dining: 'fa-cutlery',
-    'green-areas': 'fa-tree'
+  renderMaps() {
+    return (
+      <MapElement
+        onMapLoad={_.noop}
+        onMapClick={_.noop}
+        markers={[]}
+        onMarkerRightClick={_.noop}
+      />
+    )
   }
-
-    renderMaps() {
-        return (
-            <MapElement
-                onMapLoad={_.noop}
-                onMapClick={_.noop}
-                markers={[]}
-                onMarkerRightClick={_.noop}
-            />
-        )
-    }
 
 
   render() {
@@ -44,43 +38,12 @@ class MainSection extends Component {
         <div className="sub-scores-container">
           {
             this.props.scores.subscores.map(score => (
-              <div className="score">
-                <div className="score-content">
-                  <div className="score-icon-container">
-                    <i className={this.getIconClass(score)}></i>
-                  </div>
-                  <div className="score-items">
-                    <div className="score-item">
-                      <div className="score-item-title">ocena</div>
-                      <div className="score-item-value">{score.score}</div>
-                    </div>
-                    <div className="score-item">
-                      <div className="score-item-title">w promieniu {score.radius}km</div>
-                      <div className="score-item-value">{score.inRadius}</div>
-                    </div>
-                    <div className="score-item">
-                      <div className="score-item-title">do najbliższego</div>
-                      <div className="score-item-value">{score.nearestDistance}m</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="score-rate-bar" style={({width: (score.score * 10)+'%'})}></div>
-              </div>
+              <Score score={score}/>
             ))
           }
         </div>
       </div>
     )
-  }
-
-  getIconClass(score) {
-    let classes = {
-      fa: true
-    };
-    if(MainSection.scoreCategoryToIconClass[score.category] !== undefined) {
-      classes[MainSection.scoreCategoryToIconClass[score.category]] = true;
-    }
-    return classNames(classes);
   }
 }
 
