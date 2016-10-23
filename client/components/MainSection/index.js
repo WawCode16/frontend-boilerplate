@@ -17,6 +17,17 @@ class MainSection extends Component {
     'green-areas': 'fa-tree'
   }
 
+    renderMaps() {
+        return (
+            <MapElement
+                onMapLoad={_.noop}
+                onMapClick={_.noop}
+                markers={[]}
+                onMarkerRightClick={_.noop}
+            />
+        )
+    }
+
 
   render() {
     const {actions} = this.props

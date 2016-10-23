@@ -11,12 +11,11 @@ import './style.scss'
 class App extends Component {
 
   renderData(data) {
-    console.log(this.props.data)
     return (data &&
       <ul>
-        {this.props.data.locations.map((item, i) =>
+        {Object.keys(this.props.data).map((key, i) =>
           <li key={i}>
-            {item.name}
+            {key}
           </li>)}
       </ul>
     )
