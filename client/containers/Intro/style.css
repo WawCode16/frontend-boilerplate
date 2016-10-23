@@ -76,7 +76,7 @@ a:hover {
 
 #home #title{
   font-family: LatoHairline, LatoRegular;
-  font-size: 50px;
+  font-size: 70px;
   padding-top: 60px;
   text-align: center;
 }
@@ -141,7 +141,7 @@ input:focus {
 
 input[type="submit"] {
     font-family: LatoLight;
-    margin-left: -10px;
+    margin-left: -72px;
     height: 43px;
     width: 72px;
     background: #97A70B;
@@ -159,7 +159,7 @@ label {
     font-weight:normal;
     position:absolute;
     pointer-events:none;
-    left:40%;
+    left:43%;
     top:10px;
     transition:0.2s ease all;
     -moz-transition:0.2s ease all;
@@ -257,19 +257,19 @@ input:focus ~ label, input:valid ~ label {
 }
 
 @media screen and (max-height: 765px) {
-    #home .section-botton{
+    #home .section-botton {
         padding-top: 48px
     }
 }
 
 @media screen and (max-height: 700px) and (max-width: 660px) {
-    #home #title .title-top{
+    #home #title .title-top {
         width: 100%;
     }
 }
 
 @media screen and (min-width: 1485px), (min-height: 985px) {
-    #home:after{
+    #home:after {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

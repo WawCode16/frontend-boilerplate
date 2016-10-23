@@ -35,6 +35,8 @@ class MainSection extends Component {
             <span className="score-item">{this.props.scores.totalScore}</span>
           </div>
         </div>
+
+        {/*List of items*/}
         <div className="sub-scores-container">
           {
             this.props.scores.subscores.map(score => (

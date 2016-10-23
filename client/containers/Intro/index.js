@@ -20,7 +20,7 @@ class Intro extends Component {
           </header>
           <div id="title">
               <p className="title-top">
-                  Sprawdz lokalizacje
+                  Sprawdz lokalizacje&nbsp;
                   <span className="title-bottom">
                       używając naszej platformy.
                   </span>
