@@ -10,7 +10,6 @@ import Intro from './containers/Intro'
 import configure from './store'
 import './style.scss'
 import 'font-awesome/scss/font-awesome.scss'
-import 'bootstrap/dist/css/bootstrap.css'
 
 
 const store = configure()

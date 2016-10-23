@@ -11,10 +11,12 @@ class App extends Component {
 
   render() {
     return (
+      <div className="container">
         <div className="page horizontal row">
           <MenuSection scores={this.props.data.scores}/>
           <MainSection scores={this.props.data.scores}/>
         </div>
+      </div>
     )
   }
 }
