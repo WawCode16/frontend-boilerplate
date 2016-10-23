@@ -18,23 +18,28 @@ class Intro extends Component {
           </header>
           <div id="title">
               <p className="title-top">
-                  Find the place you love
+                  Sprawdz lokalizacje
                   <span className="title-bottom">
-                      using our Platform.
+                      używając naszej platformy.
                   </span>
                </p>
           </div>
           <div className="text">
               <p id="text-first">
-                  By typing the address below in the field you find every important information
-                  about the neighborhood.
-                  Our platform makes millions of people happy
+                  Czy miejsce w którym zamieszkasz znajduje się w dobrej i bezpiecznej okolicy?
+              </p>
+              <p id='text-first'>
+                  Jaka jest dostępność do instytucji i usług?
+              </p>
+        <br/>
+              <p id='text-first'>
+                  Dowiedz się z nami
               </p>
           </div>
           <div id="play-btn">
               <div className="group">
                 <input type="text" id="address" required />
-                <label>Please provide address</label>
+                <label>Podaj adres do sprawdzenia</label>
                 <input type="submit" id="submit"/>
               </div>
           </div>
