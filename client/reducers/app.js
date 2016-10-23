@@ -1,8 +1,12 @@
-const initialState = [{
+const initialState = {
   query: '',
   loading: false,
-  data: null
-}]
+  data: {
+    scores: {
+      subscores: []
+    }
+  }
+}
 
 export default (state=initialState, action) => {
   switch(action.type) {
