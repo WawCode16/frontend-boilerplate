@@ -13,7 +13,7 @@ class MenuSection extends Component {
   render() {
     return (
       <div className="menu-section">
-        <a className="logo">
+        <a className="menu-logo">
            <img src="images/logo.png" alt="logo" />
         </a>
         <AddressInput onSearch={::this.search}/>

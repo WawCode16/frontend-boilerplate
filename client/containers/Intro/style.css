@@ -36,6 +36,12 @@ a:hover {
   text-decoration: none;
 }
 
+
+.logo img {
+    margin-left: 50px;
+    width: 200px;
+}
+
 #home #title{
   font-family: LatoHairline, LatoRegular;
   font-size: 77px;
@@ -160,7 +166,7 @@ input:focus ~ label, input:valid ~ label {
         width: 1440px;
     }
 
-    #logo img {
+    .logo img {
         width: 200px
     }
 
