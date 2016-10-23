@@ -24,6 +24,7 @@ class App extends Component {
   render() {
     const {actions} = this.props
     return (
+      <div className="container">
         <div className="page horizontal row">
           <MenuSection scores={this.props.data.scores}/>
           <MainSection scores={this.props.data.scores}/>
@@ -32,7 +33,7 @@ class App extends Component {
            <div>Loading...</div> :
            this.renderData(this.props.data)}*/}
         </div>
-
+      </div>
     )
   }
 }
