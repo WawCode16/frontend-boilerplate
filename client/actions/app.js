@@ -7,11 +7,36 @@ const setLoading = createAction('SET_LOADING')
 export const performQuery = (query) => (dispatch, state) => {
   dispatch(changeQueryLabel(query))
   dispatch(setLoading(true))
-  setTimeout(() => {
+  dispatch(setData({
+    scores: {
+      subscores: []
+    }
+  }))
+
+  fetch('http://94.177.240.144:9999/stats?addr=' + encodeURI(query.replace(' ', '+'))).then(result => {
+    console.log(result.json().then(data=> {
+      let subscores = Object.keys(data.stats).map(key => {
+        let v = data.stats[key];
+        return {
+          category: key,
+          score: v.average_from_five,
+          inRadius: v.places_in_radius,
+          radius: v.radius,
+          nearestDistance: v.closest
+        }
+      })
+      dispatch(setData({
+        scores: {
+          totalScore: subscores.reduce((sum, score)=> sum + score.score, 0) / subscores.length,
+          subscores: subscores
+        }
+      }))
+    }));
+  })
+  /*setTimeout(() => {
     dispatch(setData({
       scores: {
         totalScore: 7,
-        maxScore: 10,
         subscores: [{
           category: 'education',
           score: 7,
@@ -53,5 +78,5 @@ export const performQuery = (query) => (dispatch, state) => {
       }
     }))
     dispatch(setLoading(false))
-  }, 1000)
+  }, 1000)*/
 }
