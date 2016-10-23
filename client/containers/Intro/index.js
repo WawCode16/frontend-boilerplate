@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import * as actions from "../../actions/intro";
 import style from './style.css'
 
+import AddressInput from '../../components/AddressInput'
+
 
 class Intro extends Component {
   render() {
@@ -33,9 +35,9 @@ class Intro extends Component {
           </div>
           <div id="play-btn">
               <div className="group">
-                <input type="text" id="address" required />
+                <input type="text" id="address" required ref="address"/>
                 <label>Please provide address</label>
-                <input type="submit" id="submit"/>
+                <input type="submit" id="submit" onClick={() => this.search(this.refs.address.value)}/>
               </div>
           </div>
       </section>
