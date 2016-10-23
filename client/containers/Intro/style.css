@@ -36,12 +36,6 @@ a:hover {
   text-decoration: none;
 }
 
-
-#logo img {
-    width: 140px;
-
-}
-
 #home #title{
   font-family: LatoHairline, LatoRegular;
   font-size: 77px;
@@ -93,11 +87,10 @@ input 				{
     font-size:18px;
     padding:10px 10px 10px 5px;
     position: relative;
-    width:300px;
+    width:350px;
     border:1px solid #97A70B;
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
-
 }
 
 input:focus {
@@ -127,7 +120,7 @@ label {
     font-weight:normal;
     position:absolute;
     pointer-events:none;
-    left:43%;
+    left:42%;
     top:10px;
     transition:0.2s ease all;
     -moz-transition:0.2s ease all;

@@ -6,6 +6,7 @@
   line-height: 1.4;
   padding: 20px;
   overflow: auto;
+  color: #616161;
 
   .score-title {
     text-align: center;
@@ -46,10 +47,11 @@
         margin-top: -0.25em;
       }
       .score-item {
+        font-size: 50px;
+        color: darkslategrey;
         position: absolute;
         bottom: 5px;
         left: 50%;
-        font-size: 25%;
         transform: translate(-50%, 0);
       }
     }

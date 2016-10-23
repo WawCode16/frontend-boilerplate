@@ -13,7 +13,7 @@ class Intro extends Component {
       <section id="home">
           <header id="section-top" className="static">
               <div id ="header-top">
-                  <a id="logo">
+                  <a className="logo">
                       <img src="images/logo.png" alt="logo" />
                   </a>
               </div>
@@ -42,7 +42,7 @@ class Intro extends Component {
               <div className="group">
                 <input type="text" id="address" required ref="address"/>
                 <label>Podaj adres do sprawdzenia</label>
-                <input type="submit" id="submit" onClick={() => this.search(this.refs.address.value)}/>
+                <input type="submit" id="submit" onClick={() => this.search(this.refs.address.value)} value="Dalej" />
               </div>
           </div>
       </section>

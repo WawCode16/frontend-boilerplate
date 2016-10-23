@@ -13,6 +13,9 @@ class MenuSection extends Component {
   render() {
     return (
       <div className="menu-section">
+        <a className="logo">
+           <img src="images/logo.png" alt="logo" />
+        </a>
         <AddressInput onSearch={::this.search}/>
         <div id ="header-top">
             <nav id="home-nav" className="nav-wide" role="navigation">
