@@ -76,13 +76,13 @@ a:hover {
 
 #home #title{
   font-family: LatoHairline, LatoRegular;
-  font-size: 70px;
+  font-size: 77px;
   padding-top: 60px;
   text-align: center;
 }
 
 #home #title .title-top{
-  width: 805px;
+  width: 950px;
   margin: auto;
   font-weight: bold;
   color: #FFFFFF;
@@ -105,7 +105,7 @@ a:hover {
   text-align: center;
 }
 
-#home .text #text-first {
+#home .text .text-line {
   font-size: 15px;
   color: #FFFFFF;
   width: 700px;
@@ -194,6 +194,20 @@ input:focus ~ label, input:valid ~ label {
     margin-top: 16px;
 }
 
+@media screen and (min-width: 1800px) {
+    #header-top{
+        width: 1440px;
+    }
+
+    #logo img {
+        width: 200px
+    }
+
+    #home .text .text-line {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #header-top{
       width: 100%;
@@ -214,7 +228,7 @@ input:focus ~ label, input:valid ~ label {
   #home .text{
     padding: 45px 73px 0;
   }
-  #home .text #text-first{
+  #home .text .text-line{
     width: 100%;
   }
 }
