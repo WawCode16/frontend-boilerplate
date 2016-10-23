@@ -27,14 +27,14 @@ class Intro extends Component {
                </p>
           </div>
           <div className="text">
-              <p id="text-first">
+              <p className="text-line">
                   Czy miejsce w którym zamieszkasz znajduje się w dobrej i bezpiecznej okolicy?
               </p>
-              <p id='text-first'>
+              <p className='text-line'>
                   Jaka jest dostępność do instytucji i usług?
               </p>
         <br/>
-              <p id='text-first'>
+              <p className='text-line'>
                   Dowiedz się z nami
               </p>
           </div>
