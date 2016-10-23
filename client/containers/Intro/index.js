@@ -18,7 +18,7 @@ class Intro extends Component {
           </header>
           <div id="title">
               <p className="title-top">
-                  Find the place you love
+                  Find the place you love&nbsp;
                   <span className="title-bottom">
                       using our Platform.
                   </span>
