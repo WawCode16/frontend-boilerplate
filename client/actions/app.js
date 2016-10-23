@@ -8,6 +8,7 @@ export const performQuery = (query) => (dispatch, state) => {
   dispatch(changeQueryLabel(query))
   dispatch(setLoading(true))
   dispatch(setData({
+    address: query,
     scores: {
       subscores: []
     }
@@ -26,8 +27,9 @@ export const performQuery = (query) => (dispatch, state) => {
         }
       })
       dispatch(setData({
+        address: query,
         scores: {
-          totalScore: subscores.reduce((sum, score)=> sum + score.score, 0) / subscores.length,
+          totalScore: Math.round((subscores.reduce((sum, score)=> sum + score.score, 0) / subscores.length) *10) /10,
           subscores: subscores
         }
       }))

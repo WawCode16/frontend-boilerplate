@@ -29,6 +29,7 @@ class MainSection extends Component {
       <div className="main-section">
         {/*<HeaderLogo />*/}
 
+        <div className="score-title">Raport dla adresu {this.props.address}</div>
         <div className="main-score-container">
           <div className="score-icon-container">
             <i className="fa fa-trophy"></i>

@@ -7,8 +7,14 @@
   padding: 20px;
   overflow: auto;
 
+  .score-title {
+    text-align: center;
+    font-size: 2em;
+  }
+
   .main-score-container {
     font-size: 8em;
+    margin-top: 10px;
   }
 
   .sub-scores-container {
@@ -113,6 +119,8 @@
       .score-rate-bar {
         flex: 0 0 20px;
         background: green;
+        padding: 0 20px;
+        font-size: 0.4em;
       }
     }
   }

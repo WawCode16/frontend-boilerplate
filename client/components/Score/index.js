@@ -6,8 +6,7 @@ import style from './style.scss'
 class Score extends Component {
   constructor(props, context) {
     super(props, context)
-    this.state = {
-    }
+    this.state = {}
   }
 
   static scoreCategoryToIconClass = {
@@ -19,6 +18,15 @@ class Score extends Component {
     disabled: 'fa-wheelchair-alt',
     health: 'fa-medkit',
     entertainment: 'fa-fort-awesome'
+  }
+
+  static scoreCategoryNames = {
+    education: 'edukacja',
+    dining: 'kulinaria',
+    leisure: 'wypoczynek',
+    transportation: 'transport',
+    health: 'medycyna',
+    entertainment: 'rozrywka'
   }
 
   render() {
@@ -43,8 +51,9 @@ class Score extends Component {
               <div className="score-item-value">{score.nearestDistance}m</div>
             </div>
           </div>
+
         </div>
-        <div className="score-rate-bar" style={({width: (score.score * 10)+'%'})}></div>
+        <div className="score-rate-bar" style={({width: (score.score / 5 * 100) + '%'})}>{this.getCategoryName(score.category)}</div>
       </div>
     )
   }
@@ -53,10 +62,14 @@ class Score extends Component {
     let classes = {
       fa: true
     };
-    if(Score.scoreCategoryToIconClass[score.category] !== undefined) {
+    if (Score.scoreCategoryToIconClass[score.category] !== undefined) {
       classes[Score.scoreCategoryToIconClass[score.category]] = true;
     }
     return classNames(classes);
+  }
+
+  getCategoryName(category) {
+    return Score.scoreCategoryNames[category];
   }
 }
 
