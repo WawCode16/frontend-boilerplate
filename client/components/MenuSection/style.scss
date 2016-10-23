@@ -2,7 +2,7 @@
   flex: 0 0 200px;
   display: flex;
   flex-direction: column;
-  background: #9D7DA0;
+  background: #6794A3;
   padding: 10px;
 
   .search-container {
@@ -17,4 +17,114 @@
       font-size: 1em;
     }
   }
+}
+
+#header-top{
+    margin-top: 20px;
+}
+
+#home-nav {
+  z-index: 150;
+}
+
+#home-nav.nav-wide{
+  // float: right!important;
+}
+
+#home-nav ul{
+  padding: 0 40px 0 0;
+  list-style: none;
+}
+
+#home-nav ul li {
+    display: list-item;
+    height: 50px;
+}
+
+#home-nav ul li a {
+  -webkit-transition: color 250ms ease;
+  -moz-transition: color 250ms ease;
+  -ms-transition: color 250ms ease;
+  -o-transition: color 250ms ease;
+  transition: color 250ms ease;
+}
+
+#home-nav ul li a {
+  font-family: LatoLight;
+  font-size: 14px;
+  color: #b8b8b8;
+  display: block;
+  padding: 0 8px;
+  margin-left: 20px;
+  position: relative;
+}
+
+
+#home-nav ul li.active a {
+  color: #fff!important;
+  font-family: LatoBold!important;
+}
+
+#home-nav ul li a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -8px;
+  background: #c44545;
+  -webkit-transition: width .5s ease;
+  -moz-transition: width .5s ease;
+  -ms-transition: width .5s ease;
+  -o-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+#home-nav ul li.rightflow a:after {
+  right: 0;
+  left: auto;
+}
+
+#home-nav ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+#home-nav ul li a:hover:after, #home-nav ul li.active a:after {
+  width: 100%;
+}
+
+.menubutton {
+  position: relative;
+  float: right;
+  width: 35px;
+  padding-top: 11px;
+  padding-left: 35px;
+  z-index: 100;
+  display: none;
+}
+
+.sign-up{
+  font-family: LatoLight;
+  font-size: 14px;
+  color: white;
+  padding: 12px 31px;
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(133, 134, 134, 0.64);
+  border-radius: 10px;
+  background-color: initial;
+}
+
+.sign-up:hover {
+  border-color: #C44545;
+  -webkit-transition: border-color 1s;
+  -moz-transition: border-color 1s ease;
+  -ms-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  transition: border-color 1s;
 }

@@ -1,24 +1,3 @@
-@font-face {
-  font-family: LatoBold;
-  src: url(./fonts/Lato-Bold.eot) format('embedded-opentype');
-  src: url(./fonts/Lato-Bold.ttf) format('truetype'), url(./fonts/Lato-Bold.woff) format('woff'), url(./fonts/Lato-Bold.woff2) format('woff2');
-}
-@font-face {
-  font-family: LatoLight;
-  src: url(./fonts/Lato-Light.eot) format('embedded-opentype');
-  src: url(./fonts/Lato-Light.ttf) format('truetype'), url(./fonts/Lato-Light.woff) format('woff'), url(./fonts/Lato-Light.woff2) format('woff2');
-}
-@font-face{
-  font-family: LatoHairline;
-  src: url(./fonts/Lato-Hairline.eot) format('embedded-opentype');
-  src: url(./fonts/Lato-Hairline.ttf) format('truetype'), url(./fonts/Lato-Hairline.woff) format('woff'), url(./fonts/Lato-Hairline.woff2) format('woff2');
-}
-@font-face{
-  font-family: LatoRegular;
-  src: url(./fonts/Lato-Regular.eot) format('embedded-opentype');
-  src: url(./fonts/Lato-Regular.ttf) format('truetype'), url(./fonts/Lato-Regular.woff) format('woff'), url(./fonts/Lato-Regular.woff2) format('woff2');
-}
-
 body {
   font-size: 14px;
   color: #b8b8b8;
@@ -57,17 +36,6 @@ a:hover {
   text-decoration: none;
 }
 
-#section-top.static {
-  padding: 35px 35px 0;
-  margin: auto;
-  z-index: 150;
-  position: relative;
-}
-
-#header-top{
-  margin: auto;
-  width: 1140px;
-}
 
 #logo img {
     width: 140px;
