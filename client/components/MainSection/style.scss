@@ -7,9 +7,17 @@
   overflow: auto;
 
   .main-score-container {
+    font-size: 8em;
+  }
+
+  .sub-scores-container {
+    font-size: 3em;
+    margin-top: 20px;
+  }
+
+  .main-score-container {
     display: flex;
     flex: 1 0 auto;
-    font-size: 4em;
     justify-content: center;
     align-items: flex-start;
     .score-icon-container {
